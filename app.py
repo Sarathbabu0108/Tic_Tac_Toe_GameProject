@@ -94,9 +94,9 @@ def check_rows():
     # set up global variable
     global game_still_going
     # check if any of the row have all the same value
-    row_1 = board[0] = board[1] = board[2] != "_"
-    row_2 = board[3] = board[4] = board[5] != "_"
-    row_3 = board[6] = board[7] = board[8] != "_"
+    row_1 = board[0] == board[1] == board[2] != "_"
+    row_2 = board[3] == board[4] == board[5] != "_"
+    row_3 = board[6] == board[7] == board[8] != "_"
     # if any row does have a match, flag that there is a win
     if row_1 or row_2 or row_3:
         game_still_going = False
@@ -114,9 +114,9 @@ def check_columns():
     # set up global variable
     global game_still_going
     # check if any of the column have all the same value
-    column_1 = board[0] = board[3] = board[6] != "_"
-    column_2 = board[1] = board[4] = board[7] != "_"
-    column_3 = board[2] = board[5] = board[8] != "_"
+    column_1 = board[0] == board[3] == board[6] != "_"
+    column_2 = board[1] == board[4] == board[7] != "_"
+    column_3 = board[2] == board[5] == board[8] != "_"
     # if any column does have a match, flag that there is a win
     if column_1 or column_2 or column_3:
         game_still_going = False
@@ -134,8 +134,8 @@ def check_diagonals():
     # set up global variable
     global game_still_going
     # check if any of the diagonal have all the same value
-    diagonal_1 = board[0] = board[4] = board[8] != "_"
-    diagonal_2 = board[6] = board[4] = board[2] != "_"
+    diagonal_1 = board[0] == board[4] == board[8] != "_"
+    diagonal_2 = board[6] == board[4] == board[2] != "_"
 
     # if any column does have a match, flag that there is a win
     if diagonal_1 or diagonal_2:
